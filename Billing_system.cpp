@@ -2,6 +2,7 @@
 #include <cmath>
 #include <conio.h>
 #include <iomanip>
+#include <ctime>
 
 using namespace std;
 
@@ -10,7 +11,8 @@ int main()
 
     string name;
     int type;
-
+    time_t ct = time(0);
+    string currenttime = ctime(&ct);
     int phone, id, add;
 
     cout << fixed << setprecision(2);
@@ -202,8 +204,11 @@ int main()
 
         dtotal = (dj + dc + dp + dm + dl + dla);
 
-        cout << "Your Drinks item's total = " << dtotal << " Taka." << endl
+        cout << "Your Drinks item's total = " << dtotal << " Taka."
              << endl;
+
+        cout << "Billing Date : " << currenttime << endl
+             << " " << endl;
 
         cout << "-----Thanks for shopping from our shop-----" << endl
              << "--------------Have a nice day--------------" << endl
@@ -294,8 +299,9 @@ int main()
 
         ctotal = (c1 + c2 + c3 + c4 + c5 + c6);
 
-        cout << "Your Cosmatic item's total = " << ctotal << " Taka." << endl
-             << endl;
+        cout << "Your Cosmatic item's total = " << ctotal << " Taka." << endl;
+        cout << "Billing Date : " << currenttime << endl
+             << " " << endl;
 
         cout << "-----Thanks for shopping from our shop-----" << endl
              << "--------------Have a nice day--------------" << endl
@@ -385,8 +391,9 @@ int main()
 
         contotal = (con1 + con2 + con3 + con4 + con5 + con6);
 
-        cout << "Your Confectionary item's total = " << contotal << " Taka." << endl
-             << endl;
+        cout << "Your Confectionary item's total = " << contotal << " Taka." << endl;
+        cout << "Billing Date : " << currenttime << endl
+             << " " << endl;
 
         cout << "-----Thanks for shopping from our shop-----" << endl
              << "--------------Have a nice day--------------" << endl
